@@ -6,16 +6,21 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "flowbite-react": "^0.10.1",
+    "jwt-decode": "^4.0.0",
+    "quill": "^2.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
+    "react-icons": "^5.3.0",
+    "react-modal": "^3.16.1",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.26.0",
+    "react-toastify": "^10.0.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite --host",
+    "build": "tsc && vite build"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +39,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10",
+    "vite": "^5.4.2"
   }
 }

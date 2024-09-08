@@ -1,13 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rozha+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Mono+One&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  overflow-x: hidden;
 }
+
+.background{
+  background-image: url(/bg-1.jpg);
+  background-position:right ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.reveal {
+  animation: slide-up 1.5s ease-in-out;
+}
+
+.ho-ef::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+  .ho-ef:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  .ho-ef.active::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  .ufdb:not(:placeholder-shown):valid{
+    outline-color: green;
+}
+
+.ufdb:not(:placeholder-shown):invalid{
+    outline-color: red;
+} 

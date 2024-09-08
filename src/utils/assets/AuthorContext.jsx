@@ -38,7 +38,7 @@ export const ContextProvider = ({ children }) => {
 
   const isAuthor = async (token) => {
     try {
-      const response = await fetch("/api/author/check-author/", {
+      const response = await fetch(`${backendUrl}api/author/check-author/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -70,7 +70,7 @@ export const ContextProvider = ({ children }) => {
     }
 
     try {
-      let response = await fetch("/api/author/create-author/", {
+      let response = await fetch(`${backendUrl}api/author/create-author/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -85,7 +85,7 @@ export const ContextProvider = ({ children }) => {
       // let data = await response.json()
 
       if (response.status === 201) {
-        let response2 = await fetch("/api/token/", {
+        let response2 = await fetch(`${backendUrl}api/token/`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -123,7 +123,7 @@ export const ContextProvider = ({ children }) => {
     setLoading(true);
 
     try {
-      let response = await fetch("/api/token/", {
+      let response = await fetch(`${backendUrl}api/token/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -172,7 +172,7 @@ export const ContextProvider = ({ children }) => {
     }
 
     try {
-      let response = await fetch("/api/token/refresh/", {
+      let response = await fetch(`${backendUrl}api/token/refresh/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -202,7 +202,7 @@ export const ContextProvider = ({ children }) => {
 
   const getArticle = async (id) => {
     try {
-      let response = await fetch(`/api/author/article/${id}`, {
+      let response = await fetch(`${backendUrl}api/author/article/${id}`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${authTokens.access}`,

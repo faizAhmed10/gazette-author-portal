@@ -25,6 +25,7 @@ const Dropdown = ({
 
       if (response.status === 200) {
         let data = await response.json();
+        console.log(data)
         setCategories(data);
       }
     } catch (error) {

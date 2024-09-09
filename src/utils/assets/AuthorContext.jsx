@@ -243,7 +243,7 @@ export const ContextProvider = ({ children }) => {
     };
 
     initializeAuth()
-    const intervalTime = 1000 * 60 * 10;
+    const intervalTime = 1000 * 60 * 50;
 
     const interval = setInterval(() => {
       console.log("Interval running");

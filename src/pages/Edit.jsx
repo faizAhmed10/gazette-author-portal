@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ConfirmPopup from "../components/ConfirmPopup";
 
 const Edit = () => {
-  let { getArticle, authTokens, fetchCategories } = useContext(AuthorContext);
+  let { getArticle, authTokens, backendUrl } = useContext(AuthorContext);
   const { id } = useParams();
   let [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);

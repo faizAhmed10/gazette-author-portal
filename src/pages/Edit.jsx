@@ -45,7 +45,7 @@ const Edit = () => {
     }
     console.log(status);
     try {
-      let response = await fetch(`/api/author/update-article/${id}/`, {
+      let response = await fetch(`${backendUrl}api/author/update-article/${id}/`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${authTokens.access}`,

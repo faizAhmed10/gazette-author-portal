@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ConfirmPopup from "../components/ConfirmPopup";
 
 const Create = () => {
-  let { authTokens } = useContext(AuthorContext);
+  let { authTokens, backendUrl } = useContext(AuthorContext);
   let [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -47,7 +47,7 @@ const Create = () => {
     }
     console.log(category);
     try {
-      let response = await fetch("/api/author/create-article/", {
+      let response = await fetch(`${backendUrl}api/author/create-article/`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${authTokens.access}`,

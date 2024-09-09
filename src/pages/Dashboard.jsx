@@ -4,7 +4,7 @@ import ArticleListItem from "../components/ArticleListItem";
 import Loader from "../utils/assets/Loader";
 
 const Dashboard = () => {
-  let { authTokens } = useContext(AuthorContext);
+  let { authTokens, backendUrl } = useContext(AuthorContext);
   let [myArticles, setMyArticles] = useState(null);
   let [myProfile, setMyProfile] = useState(null);
   let [loading, setLoading] = useState(false);
@@ -12,7 +12,7 @@ const Dashboard = () => {
   const getMyArticles = async () => {
     setLoading(true);
     try {
-      let response = await fetch("/api/author/get-my-articles/", {
+      let response = await fetch(`${backendUrl}api/author/get-my-articles/`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${authTokens.access}`,
@@ -35,7 +35,7 @@ const Dashboard = () => {
   const getMyProfile = async () => {
     try {
       setLoading(true);
-      let response = await fetch("/api/author/get-my-profile/", {
+      let response = await fetch(`${backendUrl}api/author/get-my-profile/`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${authTokens.access}`,

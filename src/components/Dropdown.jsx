@@ -15,7 +15,7 @@ const Dropdown = ({
 
   const fetchCategories = async () => {
     try {
-      let response = await fetch("/api/author/categories/", {
+      let response = await fetch(`${backendUrl}api/author/categories/`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,7 @@ const Dropdown = ({
 
   const createCategory = async () => {
     try {
-      const response = await fetch("/api/author/categories/", {
+      const response = await fetch(`${backendUrl}api/author/categories/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

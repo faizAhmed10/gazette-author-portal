@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img3 from "../utils/home-3.png";
 import { useContext } from "react";
 import AuthorContext from "../utils/assets/AuthorContext"
 const Home = () => { 
@@ -18,12 +17,6 @@ const Home = () => {
         <Link to={authTokens ? "/dashboard" : "/login"} className="p-2 border ml-auto bg-black text-white rounded">Start Writing</Link>
         </div>
     </div> 
- 
-        {/* <img
-          src={img3}
-          alt="..."
-          className="w-[40%] backdrop-invert-0 -scale-x-100 object-cover block "
-        /> */}
 
     </div>
   );

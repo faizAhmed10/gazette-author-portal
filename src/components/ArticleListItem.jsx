@@ -14,7 +14,7 @@ const ArticleListItem = ({ myArticle, getArticles }) => {
     setLoading(true);
     try {
       let response = await fetch(
-        `/api/author/delete-article/${myArticle.id}/`,
+        `${backendUrl}api/author/delete-article/${myArticle.id}/`,
         {
           method: "DELETE",
           headers: {

@@ -19,7 +19,7 @@ const Dropdown = ({
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${authTokens.access}`,
+          "Authorization": `Bearer ${authTokens.access}`,
         },
       });
 

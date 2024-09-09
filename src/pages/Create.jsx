@@ -4,7 +4,7 @@ import "react-quill/dist/quill.snow.css";
 import AuthorContext from "../utils/assets/AuthorContext";
 import Dropdown from "../components/Dropdown";
 import PriviewArticle from "../components/PriviewArticle";
-import Loader from "/Loader";
+import Loader from "../utils/assets/Loader";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ConfirmPopup from "../components/ConfirmPopup";

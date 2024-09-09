@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AuthorContext from "../utils/assets/AuthorContext";
-import Loader from "/Loader";
+import Loader from "../utils/assets/Loader";
 
 const Article = () => {
  

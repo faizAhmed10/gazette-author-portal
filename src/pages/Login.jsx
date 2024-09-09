@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import AuthorContext from "../utils/assets/AuthorContext";
 import { Link } from "react-router-dom";
-import Loader from "/Loader"
+import Loader from "../utils/assets/Loader"
 const Login = () => {
   let { login, loading } = useContext(AuthorContext);
   return (

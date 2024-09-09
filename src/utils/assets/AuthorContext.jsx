@@ -12,7 +12,7 @@ export default AuthorContext;
 
 export const ContextProvider = ({ children }) => {
   let navigate = useNavigate();
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;;
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
   let [loading, setLoading] = useState(false);
 
   let [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);

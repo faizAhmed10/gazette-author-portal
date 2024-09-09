@@ -5,7 +5,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import Dropdown from "../components/Dropdown";
 import PriviewArticle from "../components/PriviewArticle";
-import Loader from "../utils/assets/Loader";
+import Loader from "/Loader";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ConfirmPopup from "../components/ConfirmPopup";

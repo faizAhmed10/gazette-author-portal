@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import AuthorContext from "../utils/assets/AuthorContext";
 import { Link } from "react-router-dom";
-import Loader from "../utils/assets/Loader"
+import Loader from "/Loader"
 const Login = () => {
   let { login, loading } = useContext(AuthorContext);
   return (
@@ -45,9 +45,9 @@ const Login = () => {
             minLength={8}
           />
         </div>
-        <button type="submit" className="p-2 rounded my-2 bg-black text-white">
+        {!loading && <button type="submit" className="p-2 rounded my-2 bg-black text-white">
           Login
-        </button>
+        </button>}
         <p className="font-bold">
           Not an author yet?{" "}
           <Link to="/register" className="text-blue-900 font-bold underline">

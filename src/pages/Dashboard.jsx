@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import AuthorContext from "../utils/assets/AuthorContext";
 import ArticleListItem from "../components/ArticleListItem";
-import Loader from "../utils/assets/Loader";
+import Loader from "/Loader";
 
 const Dashboard = () => {
   let { authTokens, backendUrl } = useContext(AuthorContext);

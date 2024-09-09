@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import AuthorContext from "../utils/assets/AuthorContext";
 import { Link } from "react-router-dom";
-import Loader from "../utils/assets/Loader"
+import Loader from "/Loader"
 
 const Register = () => {
   let { registerAuthor, loading } = useContext(AuthorContext);
@@ -78,9 +78,9 @@ const Register = () => {
             minLength={8}
           />
         </div>
-        <button type="submit" className="p-2 rounded my-2 bg-black text-white">
+        {!loading && <button type="submit" className="p-2 rounded my-2 bg-black text-white">
           Register
-        </button>
+        </button>}
         <p className="font-bold">
           Already an author?{" "}
           <Link to="/login" className="text-blue-900 font-bold underline">

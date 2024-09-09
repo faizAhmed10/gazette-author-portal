@@ -10,7 +10,7 @@ const Dropdown = ({
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [categories, setCategories] = useState([])
   const [newCategory, setNewCategory] = useState("")
-  let {authTokens} = useContext(AuthorContext)
+  let {authTokens, backendUrl} = useContext(AuthorContext)
 
 
   const fetchCategories = async () => {

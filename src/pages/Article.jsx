@@ -38,7 +38,7 @@ const Article = () => {
           {article.image && (
             <img
             className="block rounded w-full h-auto max-h-[700px] object-cover"
-              src={`${backendUrl}${article.image}`}
+              src={article.image.url}
               alt="loading..."
             />
           )}

@@ -54,7 +54,7 @@ const ArticleListItem = ({ myArticle, getArticles }) => {
           <div>
             {isSmallScreen && myArticle.image && (
               <img
-                src={`${backendUrl}${myArticle.image}`}
+                src={myArticle.image.url}
                 alt="..."
                 className="shadow-xl block rounded mx-auto max-h-[250px] object-cover my-auto"
               />
@@ -78,7 +78,7 @@ const ArticleListItem = ({ myArticle, getArticles }) => {
           </div>
           {!isSmallScreen && myArticle.image && (
             <img
-              src={`${backendUrl}${myArticle.image}`}
+              src={myArticle.image.url}
               alt="..."
               className="shadow-xl block rounded lg:w-[30%] md:w-[30%] h-auto lg:max-h-[200px] object-cover mx-2 my-auto"
             />

@@ -13,6 +13,7 @@ export default AuthorContext;
 export const ContextProvider = ({ children }) => {
   let navigate = useNavigate();
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  const cloudinaryUrl = import.meta.env.VITE_IMAGE_URL;
   let [loading, setLoading] = useState(false);
 
   let [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
@@ -263,6 +264,7 @@ export const ContextProvider = ({ children }) => {
     authTokens: authTokens,
     loading: loading,
     backendUrl: backendUrl,
+    cloudinaryUrl: cloudinaryUrl,
     isSmallScreen: isSmallScreen,
     isAuthor: isAuthor,
     registerAuthor: registerAuthor,

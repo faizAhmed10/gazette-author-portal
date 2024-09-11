@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ConfirmPopup from "../components/ConfirmPopup";
 
 const ArticleListItem = ({ myArticle, getArticles }) => {
-  let { authTokens, backendUrl, isSmallScreen } = useContext(AuthorContext);
+  let { authTokens, backendUrl, isSmallScreen, cloudinaryUrl } = useContext(AuthorContext);
   let [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -54,7 +54,7 @@ const ArticleListItem = ({ myArticle, getArticles }) => {
           <div>
             {isSmallScreen && myArticle.image && (
               <img
-                src={myArticle.image.url}
+                src={`${cloudinaryUrl}${myArticle.image}`}
                 alt="..."
                 className="shadow-xl block rounded mx-auto max-h-[250px] object-cover my-auto"
               />
@@ -78,7 +78,7 @@ const ArticleListItem = ({ myArticle, getArticles }) => {
           </div>
           {!isSmallScreen && myArticle.image && (
             <img
-              src={myArticle.image.url}
+            src={`${cloudinaryUrl}${myArticle.image}`}
               alt="..."
               className="shadow-xl block rounded lg:w-[30%] md:w-[30%] h-auto lg:max-h-[200px] object-cover mx-2 my-auto"
             />

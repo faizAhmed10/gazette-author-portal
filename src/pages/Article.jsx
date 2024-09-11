@@ -6,7 +6,7 @@ import Loader from "../utils/assets/Loader";
 const Article = () => {
  
   const { id } = useParams();
-  let { getArticle, backendUrl } = useContext(AuthorContext);
+  let { getArticle, cloudinaryUrl } = useContext(AuthorContext);
   let [loading, setLoading] = useState(false);
   let [article, setArticle] = useState(null);
 
@@ -18,8 +18,9 @@ const Article = () => {
         setArticle(data);
       }
       setLoading(false);
+      console.log(data)
     };
-
+  
     fetchArticle();
   }, [id]);
   return (
@@ -38,7 +39,7 @@ const Article = () => {
           {article.image && (
             <img
             className="block rounded w-full h-auto max-h-[700px] object-cover"
-              src={article.image.url}
+              src={`${cloudinaryUrl}${article.image}`}
               alt="loading..."
             />
           )}

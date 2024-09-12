@@ -9,9 +9,9 @@ const PriviewArticle = ({
   content, 
   setPriviewState,
 }) => {
-  let {  backendUrl } = useContext(AuthorContext);
+  let {  backendUrl, cloudinaryUrl } = useContext(AuthorContext);
 
-  const imageUrl = image instanceof File ? URL.createObjectURL(image) : `${backendUrl}${image}`;
+  const imageUrl = image instanceof File ? URL.createObjectURL(image) : `${cloudinaryUrl}${image}`;
 
   const close = () => {
     setPriviewState(false);
